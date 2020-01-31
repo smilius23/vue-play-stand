@@ -1,12 +1,15 @@
-# Project ignored files
-templates/pages/base/page.yaml
-build.tar.gz
-tv-landing-page
-resources
-
+.git
+.gitignore
 .DS_Store
+Dockerfile
+Dockerfile.dev
+README.md
 node_modules
-/dist
+dist
+server
+
+/tests/e2e/videos/
+/tests/e2e/screenshots/
 
 # local env files
 .env.local
@@ -24,4 +27,4 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.sw*

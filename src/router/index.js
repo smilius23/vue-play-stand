@@ -1,24 +1,27 @@
-import Vue from 'vue';
-import Router from 'vue-router'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 import PageNotFound from '@/pages/PageNotFound'
 import Home from '@/pages/Home'
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-const router = new Router({
-    routes: [
-        {
-            path: '/',
-            name: 'Home',
-            component: Home
-        },
-        {
-            path: '*',
-            name: 'NotFound',
-            redirect: {name: PageNotFound}
-        }
-    ],
-    mode: 'history'
+const routes = [
+	{
+		path: '/',
+		name: 'home',
+		component: Home
+	},
+	{
+		path: '*',
+		name: 'notFound',
+		redirect: {name: PageNotFound}
+	}
+]
+
+const router = new VueRouter({
+	mode: 'history',
+	base: process.env.BASE_URL,
+	routes
 })
 
 export default router
