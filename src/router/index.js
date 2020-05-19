@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import PageNotFound from '@/pages/PageNotFound'
 import Home from '@/pages/Home'
+import FontPage from '@/pages/FontPage'
 
 Vue.use(VueRouter)
 
@@ -12,9 +13,14 @@ const routes = [
 		component: Home
 	},
 	{
+		path: '/fonts',
+		name: 'fonts',
+		component: FontPage
+	},
+	{
 		path: '*',
 		name: 'notFound',
-		redirect: {name: PageNotFound}
+		redirect: { name: PageNotFound }
 	}
 ]
 
